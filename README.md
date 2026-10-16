@@ -44,5 +44,6 @@ variables.tf - variables to modify
 - vnet_cidrs (If the given CDIR overlaps with your network CIDRs)
 - subnet_cidrs (If you change the VNET cidr you will need to change subnet CIDRs)
 
+## Credentials and identifiers
 
-
+The subscription, tenant and application ids in `variables.tf` are placeholders, and the client secret must never be set in a file. Pass it at run time, for example `TF_VAR_service_principal_secrect`, or use `az login`. State files are ignored by `.gitignore` and must never be committed.
